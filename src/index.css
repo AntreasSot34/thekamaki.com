@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-sand text-ink font-sans antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+  .btn-primary {
+    @apply btn bg-coral text-white shadow-glow hover:bg-coral-dark hover:-translate-y-0.5;
+  }
+  .btn-ghost {
+    @apply btn border border-ink/15 bg-white/60 text-ink hover:border-ink/30 hover:bg-white;
+  }
+  .btn-dark {
+    @apply btn bg-ink text-cream hover:bg-ink-soft hover:-translate-y-0.5;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-teal-dark;
+  }
+  .card {
+    @apply rounded-4xl border border-ink/5 bg-white shadow-card;
+  }
+  .link-nav {
+    @apply text-sm font-medium text-ink/70 transition-colors hover:text-coral;
+  }
+}
